@@ -1,0 +1,577 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Metadata Field Boundary</h:title>
+    <model>
+      <instance>
+        <RIICE_Metadata_FieldBoundary2 id="Metadata_Field_Boundary" version="201502">
+          <start/>
+          <end/>
+          <phonenumber/>
+          <deviceid/>
+          <noteIntro/>
+          <noteActivities/>
+          <LocID/>
+          <Loc_ID/>
+          <season/>
+          <currentFieldCondition/>
+          <picField/>
+          <gpsCorner1>
+            <gps11/>
+            <gps11Acc/>
+            <gps11AccPoor/>
+            <gps12/>
+            <gps12Acc/>
+            <gps12AccPoor/>
+            <gps13/>
+            <gps13Acc/>
+            <gps13AccPoor/>
+            <avgAcc1/>
+            <avgGPS1notOK/>
+          </gpsCorner1>
+          <gpsCorner2>
+            <gps21/>
+            <gps21Acc/>
+            <gps21AccPoor/>
+            <gps22/>
+            <gps22Acc/>
+            <gps22AccPoor/>
+            <gps23/>
+            <gps23Acc/>
+            <gps23AccPoor/>
+            <avgAcc2/>
+            <avgGPS2notOK/>
+          </gpsCorner2>
+          <gpsCorner3>
+            <gps31/>
+            <gps31Acc/>
+            <gps31AccPoor/>
+            <gps32/>
+            <gps32Acc/>
+            <gps32AccPoor/>
+            <gps33/>
+            <gps33Acc/>
+            <gps33AccPoor/>
+            <avgAcc3/>
+            <avgGPS3notOK/>
+          </gpsCorner3>
+          <gpsCorner4>
+            <gps41/>
+            <gps41Acc/>
+            <gps41AccPoor/>
+            <gps42/>
+            <gps42Acc/>
+            <gps42AccPoor/>
+            <gps43/>
+            <gps43Acc/>
+            <gps43AccPoor/>
+            <avgAcc4/>
+            <avgGPS4notOK/>
+          </gpsCorner4>
+          <moreFieldCorners/>
+          <gpsCorner5>
+            <gps51/>
+            <gps51Acc/>
+            <gps51AccPoor/>
+            <gps52/>
+            <gps52Acc/>
+            <gps52AccPoor/>
+            <gps53/>
+            <gps53Acc/>
+            <gps53AccPoor/>
+            <avgAcc5/>
+            <avgGPS5notOK/>
+          </gpsCorner5>
+          <gpsCorner6>
+            <gps61/>
+            <gps61Acc/>
+            <gps61AccPoor/>
+            <gps62/>
+            <gps62Acc/>
+            <gps62AccPoor/>
+            <gps63/>
+            <gps63Acc/>
+            <gps63AccPoor/>
+            <avgAcc6/>
+            <avgGPS6notOK/>
+          </gpsCorner6>
+          <gpsCorner7>
+            <gps71/>
+            <gps71Acc/>
+            <gps71AccPoor/>
+            <gps72/>
+            <gps72Acc/>
+            <gps72AccPoor/>
+            <gps73/>
+            <gps73Acc/>
+            <gps73AccPoor/>
+            <avgAcc7/>
+            <avgGPS7notOK/>
+          </gpsCorner7>
+          <gpsCorner8>
+            <gps81/>
+            <gps81Acc/>
+            <gps81AccPoor/>
+            <gps82/>
+            <gps82Acc/>
+            <gps82AccPoor/>
+            <gps83/>
+            <gps83Acc/>
+            <gps83AccPoor/>
+            <avgAcc8/>
+            <avggps8notOK/>
+          </gpsCorner8>
+          <remarks/>
+          <TheEnd/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </RIICE_Metadata_FieldBoundary2>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/RIICE_Metadata_FieldBoundary2/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/RIICE_Metadata_FieldBoundary2/end" type="dateTime"/>
+      <bind jr:preload="property" jr:preloadParams="phonenumber" nodeset="/RIICE_Metadata_FieldBoundary2/phonenumber" type="string"/>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/RIICE_Metadata_FieldBoundary2/deviceid" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/noteIntro" readonly="true()" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/noteActivities" readonly="true()" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/LocID" required="true()" type="barcode"/>
+      <bind calculate="int( /RIICE_Metadata_FieldBoundary2/LocID )" nodeset="/RIICE_Metadata_FieldBoundary2/Loc_ID" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/season" required="true()" type="select1"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/currentFieldCondition" required="true()" type="select1"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/picField" required="true()" type="binary"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner1/gps11" required="true()" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner1/gps11 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner1/gps11 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner1/gps11Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner1/gps11AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner1/gps11Acc &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner1/gps12" required="true()" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner1/gps12 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner1/gps12 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner1/gps12Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner1/gps12AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner1/gps12Acc &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner1/gps13" required="true()" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner1/gps13 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner1/gps13 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner1/gps13Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner1/gps13AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner1/gps13Acc &gt;5" type="string"/>
+      <bind calculate="(number( /RIICE_Metadata_FieldBoundary2/gpsCorner1/gps11Acc ) + number( /RIICE_Metadata_FieldBoundary2/gpsCorner1/gps12Acc ) + number( /RIICE_Metadata_FieldBoundary2/gpsCorner1/gps13Acc )) div 3" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner1/avgAcc1" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner1/avgGPS1notOK" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner1/avgAcc1  &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner2/gps21" required="true()" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner2/gps21 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner2/gps21 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner2/gps21Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner2/gps21AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner2/gps21Acc &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner2/gps22" required="true()" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner2/gps22 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner2/gps22 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner2/gps22Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner2/gps22AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner2/gps22Acc &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner2/gps23" required="true()" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner2/gps23 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner2/gps23 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner2/gps23Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner2/gps23AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner2/gps23Acc &gt;5" type="string"/>
+      <bind calculate="(number( /RIICE_Metadata_FieldBoundary2/gpsCorner2/gps21Acc ) + number( /RIICE_Metadata_FieldBoundary2/gpsCorner2/gps22Acc ) + number( /RIICE_Metadata_FieldBoundary2/gpsCorner2/gps23Acc )) div 3" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner2/avgAcc2" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner2/avgGPS2notOK" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner2/avgAcc2  &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner3/gps31" required="true()" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner3/gps31 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner3/gps31 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner3/gps31Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner3/gps31AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner3/gps31Acc &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner3/gps32" required="true()" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner3/gps32 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner3/gps32 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner3/gps32Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner3/gps32AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner3/gps32Acc &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner3/gps33" required="true()" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner3/gps33 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner3/gps33 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner3/gps33Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner3/gps33AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner3/gps33Acc &gt;5" type="string"/>
+      <bind calculate="(number( /RIICE_Metadata_FieldBoundary2/gpsCorner3/gps31Acc ) + number( /RIICE_Metadata_FieldBoundary2/gpsCorner3/gps32Acc ) + number( /RIICE_Metadata_FieldBoundary2/gpsCorner3/gps33Acc )) div 3" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner3/avgAcc3" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner3/avgGPS3notOK" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner3/avgAcc3  &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner4/gps41" required="true()" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner4/gps41 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner4/gps41 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner4/gps41Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner4/gps41AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner4/gps41Acc &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner4/gps42" required="true()" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner4/gps42 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner4/gps42 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner4/gps42Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner4/gps42AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner4/gps42Acc &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner4/gps43" required="true()" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner4/gps43 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner4/gps43 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner4/gps43Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner4/gps43AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner4/gps43Acc &gt;5" type="string"/>
+      <bind calculate="(number( /RIICE_Metadata_FieldBoundary2/gpsCorner4/gps41Acc ) + number( /RIICE_Metadata_FieldBoundary2/gpsCorner4/gps42Acc ) + number( /RIICE_Metadata_FieldBoundary2/gpsCorner4/gps43Acc )) div 3" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner4/avgAcc4" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner4/avgGPS4notOK" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner4/avgAcc4  &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/moreFieldCorners" required="true()" type="select1"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner5" relevant="selected( /RIICE_Metadata_FieldBoundary2/moreFieldCorners ,'1')"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner5/gps51" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner5/gps51 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner5/gps51 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner5/gps51Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner5/gps51AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner5/gps51Acc &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner5/gps52" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner5/gps52 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner5/gps52 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner5/gps52Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner5/gps52AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner5/gps52Acc &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner5/gps53" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner5/gps53 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner5/gps53 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner5/gps53Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner5/gps53AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner5/gps53Acc &gt;5" type="string"/>
+      <bind calculate="(number( /RIICE_Metadata_FieldBoundary2/gpsCorner5/gps51Acc ) + number( /RIICE_Metadata_FieldBoundary2/gpsCorner5/gps52Acc ) + number( /RIICE_Metadata_FieldBoundary2/gpsCorner5/gps53Acc )) div 3" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner5/avgAcc5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner5/avgGPS5notOK" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner5/avgAcc5  &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner6" relevant="selected( /RIICE_Metadata_FieldBoundary2/moreFieldCorners ,'1')"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner6/gps61" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner6/gps61 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner6/gps61 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner6/gps61Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner6/gps61AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner6/gps61Acc &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner6/gps62" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner6/gps62 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner6/gps62 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner6/gps62Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner6/gps62AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner6/gps62Acc &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner6/gps63" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner6/gps63 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner6/gps63 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner6/gps63Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner6/gps63AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner6/gps63Acc &gt;5" type="string"/>
+      <bind calculate="(number( /RIICE_Metadata_FieldBoundary2/gpsCorner6/gps61Acc ) + number( /RIICE_Metadata_FieldBoundary2/gpsCorner6/gps62Acc ) + number( /RIICE_Metadata_FieldBoundary2/gpsCorner6/gps63Acc )) div 3" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner6/avgAcc6" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner6/avgGPS6notOK" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner6/avgAcc6  &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner7" relevant="selected( /RIICE_Metadata_FieldBoundary2/moreFieldCorners ,'1')"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner7/gps71" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner7/gps71 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner7/gps71 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner7/gps71Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner7/gps71AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner7/gps71Acc &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner7/gps72" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner7/gps72 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner7/gps72 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner7/gps72Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner7/gps72AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner7/gps72Acc &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner7/gps73" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner7/gps73 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner7/gps73 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner7/gps73Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner7/gps73AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner7/gps73Acc &gt;5" type="string"/>
+      <bind calculate="(number( /RIICE_Metadata_FieldBoundary2/gpsCorner7/gps71Acc ) + number( /RIICE_Metadata_FieldBoundary2/gpsCorner7/gps72Acc ) + number( /RIICE_Metadata_FieldBoundary2/gpsCorner7/gps73Acc )) div 3" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner7/avgAcc7" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner7/avgGPS7notOK" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner7/avgAcc7  &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner8" relevant="selected( /RIICE_Metadata_FieldBoundary2/moreFieldCorners ,'1')"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner8/gps81" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner8/gps81 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner8/gps81 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner8/gps81Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner8/gps81AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner8/gps81Acc &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner8/gps82" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner8/gps82 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner8/gps82 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner8/gps82Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner8/gps82AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner8/gps82Acc &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner8/gps83" type="geopoint"/>
+      <bind calculate="int(substr(string( /RIICE_Metadata_FieldBoundary2/gpsCorner8/gps83 ),string-length(string( /RIICE_Metadata_FieldBoundary2/gpsCorner8/gps83 ))-4))" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner8/gps83Acc" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner8/gps83AccPoor" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner8/gps83Acc &gt;5" type="string"/>
+      <bind calculate="(number( /RIICE_Metadata_FieldBoundary2/gpsCorner8/gps81Acc ) + number( /RIICE_Metadata_FieldBoundary2/gpsCorner8/gps82Acc ) + number( /RIICE_Metadata_FieldBoundary2/gpsCorner8/gps83Acc )) div 3" nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner8/avgAcc8" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/gpsCorner8/avggps8notOK" readonly="true()" relevant=" /RIICE_Metadata_FieldBoundary2/gpsCorner8/avgAcc8  &gt;5" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/remarks" type="string"/>
+      <bind nodeset="/RIICE_Metadata_FieldBoundary2/TheEnd" readonly="true()" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/RIICE_Metadata_FieldBoundary2/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat('MTD_FLDBND_', /RIICE_Metadata_FieldBoundary2/LocID )" nodeset="/RIICE_Metadata_FieldBoundary2/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <input ref="/RIICE_Metadata_FieldBoundary2/noteIntro">
+      <label>Metadata Field Boundary</label>
+      <hint>This form is used to capture the GPS coordinates of all field corners
+
+What to bring:
+1. Survey gadget
+2. Barcode
+3. Personal protective equipment
+
+Overview of Activity:
+1. Capture GPS coordinates of field corners
+2. Take a picture of the field
+3. Describe the field condition
+4. Encode data to this form, review, and save
+5. Submit form
+
+Reminders:
+1. Battery is fully charged
+2. GPS is switched 'ON'
+3. WiFi is switched 'OFF'
+4. Camera image resolution is '640x480'
+5. Geotagging of photo is enabled
+6. if unsure, please refer to the protocols</hint>
+    </input>
+    <input ref="/RIICE_Metadata_FieldBoundary2/noteActivities">
+      <label>What data to collect and when to collect.</label>
+      <hint>Data to be gathered
+-GPS coordinates of all field corners
+
+Time of visits
+-Pre-season
+-Land preparation</hint>
+    </input>
+    <input ref="/RIICE_Metadata_FieldBoundary2/LocID">
+      <label>Location ID</label>
+      <hint>Scan the barcode associated with this Location</hint>
+    </input>
+    <select1 ref="/RIICE_Metadata_FieldBoundary2/season">
+      <label>What is this season?</label>
+      <item>
+        <label>Wet</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Dry</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/RIICE_Metadata_FieldBoundary2/currentFieldCondition">
+      <label>What is the current field condition?</label>
+      <item>
+        <label>Planted</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Fallow</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Land preparation</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Just harvested</label>
+        <value>4</value>
+      </item>
+    </select1>
+    <upload mediatype="image/*" ref="/RIICE_Metadata_FieldBoundary2/picField">
+      <label>Take photo of the field</label>
+      <hint>Reminders: 
+1. Ensure that the lowest photo resolution is selected and GPS tagging is activated (Please refer to protocol on how to set the photo resolution and GPS tagging). 
+2. Take photos in landscape orientation.
+3. Don't forget to click the 'Save' button</hint>
+    </upload>
+    <group ref="/RIICE_Metadata_FieldBoundary2/gpsCorner1">
+      <label>GPS field corners</label>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner1/gps11">
+        <label>GPS coordinates 1 of corner 1</label>
+        <hint>Allow the device to automatically record the GPS position. By default, the geo-positioning process automatically records the position when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner1/gps11AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner1/gps11Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner1/gps12">
+        <label>GPS coordinates 2 of corner 1</label>
+        <hint>Allow the device to automatically record the GPS coordinates. By default, the geo-positioning process automatically records the coordinates when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner1/gps12AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner1/gps12Acc "/>).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner1/gps13">
+        <label>GPS coordinates 3 of corner 1</label>
+        <hint>Allow the device to automatically record the GPS coordinates. By default, the geo-positioning process automatically records the coordinates when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner1/gps13AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner1/gps13Acc "/>).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner1/avgGPS1notOK">
+        <label>Accuracy is &gt; 5 meters. Please redo the GPS coordinate collection process</label>
+      </input>
+    </group>
+    <group ref="/RIICE_Metadata_FieldBoundary2/gpsCorner2">
+      <label>GPS field corners</label>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner2/gps21">
+        <label>GPS coordinates 1 of corner 2</label>
+        <hint>Allow the device to automatically record the GPS position. By default, the geo-positioning process automatically records the position when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner2/gps21AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner2/gps21Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner2/gps22">
+        <label>GPS coordinates 2 of corner 2</label>
+        <hint>Allow the device to automatically record the GPS coordinates. By default, the geo-positioning process automatically records the coordinates when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner2/gps22AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner2/gps22Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner2/gps23">
+        <label>GPS coordinates 3 of corner 2</label>
+        <hint>Allow the device to automatically record the GPS coordinates. By default, the geo-positioning process automatically records the coordinates when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner2/gps23AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner2/gps23Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner2/avgGPS2notOK">
+        <label>Accuracy is &gt; 5 meters. Please redo the GPS coordinate collection process</label>
+      </input>
+    </group>
+    <group ref="/RIICE_Metadata_FieldBoundary2/gpsCorner3">
+      <label>GPS field corners</label>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner3/gps31">
+        <label>GPS coordinates 1 of corner 3</label>
+        <hint>Allow the device to automatically record the GPS position. By default, the geo-positioning process automatically records the position when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner3/gps31AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner3/gps31Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner3/gps32">
+        <label>GPS coordinates 2 of corner 3</label>
+        <hint>Allow the device to automatically record the GPS coordinates. By default, the geo-positioning process automatically records the coordinates when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner3/gps32AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner3/gps32Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner3/gps33">
+        <label>GPS coordinates 3 of corner 3</label>
+        <hint>Allow the device to automatically record the GPS coordinates. By default, the geo-positioning process automatically records the coordinates when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner3/gps33AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner3/gps33Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner3/avgGPS3notOK">
+        <label>Accuracy is &gt; 5 meters. Please redo the GPS coordinate collection process</label>
+      </input>
+    </group>
+    <group ref="/RIICE_Metadata_FieldBoundary2/gpsCorner4">
+      <label>GPS field corners</label>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner4/gps41">
+        <label>GPS coordinates 1 of corner 4</label>
+        <hint>Allow the device to automatically record the GPS position. By default, the geo-positioning process automatically records the position when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner4/gps41AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner4/gps41Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner4/gps42">
+        <label>GPS coordinates 2 of corner 4</label>
+        <hint>Allow the device to automatically record the GPS coordinates. By default, the geo-positioning process automatically records the coordinates when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner4/gps42AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner4/gps42Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner4/gps43">
+        <label>GPS coordinates 3 of corner 4</label>
+        <hint>Allow the device to automatically record the GPS coordinates. By default, the geo-positioning process automatically records the coordinates when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner4/gps43AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner4/gps43Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner4/avgGPS4notOK">
+        <label>Accuracy is &gt; 5 meters. Please redo the GPS coordinate collection process</label>
+      </input>
+    </group>
+    <select1 ref="/RIICE_Metadata_FieldBoundary2/moreFieldCorners">
+      <label>Are there more field corners? If yes, please continue capturing the GPS coordinates.</label>
+      <item>
+        <label>Yes</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>No</label>
+        <value>0</value>
+      </item>
+    </select1>
+    <group ref="/RIICE_Metadata_FieldBoundary2/gpsCorner5">
+      <label>GPS field corners</label>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner5/gps51">
+        <label>GPS coordinates 1 of corner 5</label>
+        <hint>Allow the device to automatically record the GPS position. By default, the geo-positioning process automatically records the position when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner5/gps51AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner5/gps51Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner5/gps52">
+        <label>GPS coordinates 2 of corner 5</label>
+        <hint>Allow the device to automatically record the GPS coordinates. By default, the geo-positioning process automatically records the coordinates when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner5/gps52AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner5/gps52Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner5/gps53">
+        <label>GPS coordinates 3 of corner 5</label>
+        <hint>Allow the device to automatically record the GPS coordinates. By default, the geo-positioning process automatically records the coordinates when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner5/gps53AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner5/gps53Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner5/avgGPS5notOK">
+        <label>Accuracy is &gt; 5 meters. Please redo the GPS coordinate collection process</label>
+      </input>
+    </group>
+    <group ref="/RIICE_Metadata_FieldBoundary2/gpsCorner6">
+      <label>GPS field corners</label>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner6/gps61">
+        <label>GPS coordinates 1 of corner 6</label>
+        <hint>Allow the device to automatically record the GPS position. By default, the geo-positioning process automatically records the position when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner6/gps61AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner6/gps61Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner6/gps62">
+        <label>GPS coordinates 2 of corner 6</label>
+        <hint>Allow the device to automatically record the GPS coordinates. By default, the geo-positioning process automatically records the coordinates when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner6/gps62AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner6/gps62Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner6/gps63">
+        <label>GPS coordinates 3 of corner 6</label>
+        <hint>Allow the device to automatically record the GPS coordinates. By default, the geo-positioning process automatically records the coordinates when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner6/gps63AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner6/gps63Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner6/avgGPS6notOK">
+        <label>Accuracy is &gt; 5 meters. Please redo the GPS coordinate collection process</label>
+      </input>
+    </group>
+    <group ref="/RIICE_Metadata_FieldBoundary2/gpsCorner7">
+      <label>GPS field corners</label>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner7/gps71">
+        <label>GPS coordinates 1 of corner 7</label>
+        <hint>Allow the device to automatically record the GPS position. By default, the geo-positioning process automatically records the position when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner7/gps71AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner7/gps71Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner7/gps72">
+        <label>GPS coordinates 2 of corner 7</label>
+        <hint>Allow the device to automatically record the GPS coordinates. By default, the geo-positioning process automatically records the coordinates when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner7/gps72AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner7/gps72Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner7/gps73">
+        <label>GPS coordinates 3 of corner 7</label>
+        <hint>Allow the device to automatically record the GPS coordinates. By default, the geo-positioning process automatically records the coordinates when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner7/gps73AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner7/gps73Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner7/avgGPS7notOK">
+        <label>Accuracy is &gt; 5 meters. Please redo the GPS coordinate collection process</label>
+      </input>
+    </group>
+    <group ref="/RIICE_Metadata_FieldBoundary2/gpsCorner8">
+      <label>GPS field corners</label>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner8/gps81">
+        <label>GPS coordinates 1 of corner 8</label>
+        <hint>Allow the device to automatically record the GPS position. By default, the geo-positioning process automatically records the position when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner8/gps81AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner8/gps81Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner8/gps82">
+        <label>GPS coordinates 2 of corner 8</label>
+        <hint>Allow the device to automatically record the GPS coordinates. By default, the geo-positioning process automatically records the coordinates when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner8/gps82AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner8/gps82Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input appearance="maps" ref="/RIICE_Metadata_FieldBoundary2/gpsCorner8/gps83">
+        <label>GPS coordinates 3 of corner 8</label>
+        <hint>Allow the device to automatically record the GPS coordinates. By default, the geo-positioning process automatically records the coordinates when accuracy is 5m or less.</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner8/gps83AccPoor">
+        <label>WARNING! Poor GPS accuracy (<output value=" /RIICE_Metadata_FieldBoundary2/gpsCorner8/gps83Acc "/>m).</label>
+        <hint>GPS accuracy is greater than 5 meters. Please swipe back and record a new GPS coordinates</hint>
+      </input>
+      <input ref="/RIICE_Metadata_FieldBoundary2/gpsCorner8/avggps8notOK">
+        <label>Accuracy is &gt; 5 meters. Please redo the GPS coordinate collection process</label>
+      </input>
+    </group>
+    <input ref="/RIICE_Metadata_FieldBoundary2/remarks">
+      <label>General remarks</label>
+      <hint>Any additional information</hint>
+    </input>
+    <input ref="/RIICE_Metadata_FieldBoundary2/TheEnd">
+      <label>This is the end of the form. You can swipe back to review the answers to the questions. If you are satisfied and ready to close this form, swipe forward until you reach the last page. Ideally, after saving the form, you should submit it immediately.</label>
+      <hint>Ensure that data connection is 'ON'</hint>
+    </input>
+  </h:body>
+</h:html>
